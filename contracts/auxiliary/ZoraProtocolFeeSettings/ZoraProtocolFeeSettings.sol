@@ -52,7 +52,7 @@ contract ZoraProtocolFeeSettings is ERC721 {
     /// @param newOwner The address of the new owner
     event OwnerUpdated(address indexed newOwner);
 
-    constructor() ERC721("ZORA Module Fee Switch", "ZORF") {
+    constructor() ERC721("Atrirum Module Fee Switch", "AMFS") {
         _setOwner(msg.sender);
     }
 

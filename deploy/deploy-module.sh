@@ -135,7 +135,7 @@ do
 done
 MODULE_DEPLOY_OUTPUT=$(${MODULE_DEPLOY_CMD})
 MODULE_ADDR=$(echo $MODULE_DEPLOY_OUTPUT | rev | cut -d " " -f4 | rev)
-if [[ $MODULE_ADDR =~ ^0x[0-9a-f]{40}$ ]]
+if [[ $MODULE_ADDR =~ ^0x[0-9a-fA-F]{40}$ ]]
 then
     echo "$MODULE_NAME deployed to $MODULE_ADDR"
 else
