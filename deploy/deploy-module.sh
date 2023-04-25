@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # args: 'overwrite'/'dontoverwrite'; module path; module name; constructor abi in quotes or 'noargs'; any constructor args separated by spaces
-# example: bash deploy/deploy-module.sh overwrite Asks/V1.1/AsksV1_1.sol AsksV1_1 "constructor(address)" "0xasdf"
+# example: bash deploy/deploy-module.sh overwrite contracts/modules/Asks/V1.1/AsksV1_1.sol AsksV1_1 "constructor(address)" "0xasdf"
 # env: ETHERSCAN_API_KEY, CHAIN_ID, RPC_URL, PRIVATE_KEY
+
+# This script is also used to deploy transfer helpers
 
 # supported chains (via ethers_rs which uses corresponding chain_ids):
 # Mainnet
@@ -63,7 +65,7 @@ then
 fi
 OVERWRITE="$1"
 
-if [ "$2" = "" ] || [ ! -f "./contracts/modules/$2" ]
+if [ "$2" = "" ] || [ ! -f "$2" ]
 then
     echo "Module path missing or incorrect. Exiting."
     exit 1
@@ -150,7 +152,7 @@ then
     MODULE_ENCODED_ARGS=$(cast abi-encode $CONSTRUCTOR_ABI "$@")
     MODULE_VERIFY_CMD="${MODULE_VERIFY_CMD} --constructor-args $MODULE_ENCODED_ARGS"
 fi
-MODULE_VERIFY_CMD="${MODULE_VERIFY_CMD} --compiler-version v0.8.10+commit.fc410830 $MODULE_ADDR contracts/modules/$MODULE_PATH:$MODULE_NAME $ETHERSCAN_API_KEY"
+MODULE_VERIFY_CMD="${MODULE_VERIFY_CMD} --compiler-version v0.8.10+commit.fc410830 $MODULE_ADDR $MODULE_PATH:$MODULE_NAME $ETHERSCAN_API_KEY"
 for I in 0 1 2 3 4
 do
     {

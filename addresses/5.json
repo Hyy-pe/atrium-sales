@@ -1,4 +1,5 @@
 {
-    "ZoraModuleManager": "0x07fc744bc6808c0367b8ccc78d041905414dadbf",
-    "ZoraProtocolFeeSettings": "0x6b10aac0ab2274dd85b707fbcc4396d3dc3c4112"
+  "ERC721TransferHelper": "0x70cC622059Db9839dE5F611D8255B2e21dd2075A",
+  "ZoraModuleManager": "0x07fc744bc6808c0367b8ccc78d041905414dadbf",
+  "ZoraProtocolFeeSettings": "0x6b10aac0ab2274dd85b707fbcc4396d3dc3c4112"
 }
