@@ -1,0 +1,9 @@
+{
+  "AsksV1_1": "0x7e9b6be0f7E37Dd7bf9783cFDcf15bb1481de715",
+  "ERC20TransferHelper": "0x7161a0bdd64f660549E845768a518871f93072Ab",
+  "ERC721TransferHelper": "0x4918e5250214b2a4d064557893cf948f96BbCEfb",
+  "RoyaltyEngineV1": "0x0385603ab55642cb4dd5de3ae9e306809991804f",
+  "WETH": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "ZoraModuleManager": "0xbf324d6e9a4281b8fc99909878ce5e23b717c9d5",
+  "ZoraProtocolFeeSettings": "0x214e553dc5adb0cab734b44cfc5d14ddbfa02d9b"
+}
