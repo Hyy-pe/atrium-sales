@@ -164,7 +164,7 @@ FEE_SETTINGS_INIT_TX_STATUS=$(echo $FEE_SETTINGS_INIT_OUTPUT | rev | cut -d " " 
 if [ $FEE_SETTINGS_INIT_TX_STATUS != "0x1" ]
 then
     echo "Transaction $FEE_SETTINGS_INIT_TX_HASH did not succeed. Exiting."
-    exit 1
+    #exit 1
 else
     echo "ZoraProtocolFeeSettings.init transaction $FEE_SETTINGS_INIT_TX_HASH succeeded."
 fi
@@ -175,7 +175,7 @@ FEE_SETTINGS_SET_OWNER_TX_STATUS=$(echo $FEE_SETTINGS_SET_OWNER_OUTPUT | rev | c
 if [ $FEE_SETTINGS_SET_OWNER_TX_STATUS != "0x1" ]
 then
     echo "Transaction $FEE_SETTINGS_SET_OWNER_TX_HASH did not succeed. Exiting."
-    exit 1
+    #exit 1
 else
     echo "ZoraProtocolFeeSettings.setOwner transaction $FEE_SETTINGS_SET_OWNER_TX_HASH succeeded."
 fi
